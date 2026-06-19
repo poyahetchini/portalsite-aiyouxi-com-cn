@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://poyahetchini.github.io/portalsite-aiyouxi-com-cn/sitemap.xml

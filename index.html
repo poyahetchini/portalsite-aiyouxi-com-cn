@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>爱游戏 · 故事与场景</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(145deg, #fbe9d7 0%, #f3d5b5 40%, #eec39a 100%);
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 2rem 1.25rem;
+            line-height: 1.6;
+            color: #2e241e;
+        }
+
+        .container {
+            max-width: 920px;
+            width: 100%;
+            background: rgba(255, 252, 248, 0.85);
+            backdrop-filter: blur(8px);
+            border-radius: 48px 24px 48px 24px;
+            padding: 2.8rem 2.4rem;
+            box-shadow: 0 20px 40px -12px rgba(120, 70, 40, 0.25), 0 4px 18px rgba(0, 0, 0, 0.04);
+            transition: all 0.2s ease;
+        }
+
+        @media (max-width: 580px) {
+            body { padding: 1.2rem 0.8rem; }
+            .container { padding: 1.8rem 1.2rem; border-radius: 32px 16px 32px 16px; }
+        }
+
+        /* 叙事开场短句 — 类似引子 */
+        .opener {
+            font-size: 1.5rem;
+            font-weight: 380;
+            letter-spacing: 0.02em;
+            color: #4f3a2b;
+            border-left: 5px solid #d9a77c;
+            padding-left: 1.2rem;
+            margin-bottom: 1.8rem;
+            line-height: 1.5;
+        }
+
+        .opener span {
+            display: inline-block;
+            background: #e7cdb1;
+            padding: 0.1rem 0.5rem;
+            border-radius: 12px;
+            font-weight: 450;
+            color: #3a2a1d;
+        }
+
+        /* 承接段落 */
+        .narrative {
+            margin: 1.2rem 0 2rem 0;
+            font-size: 1rem;
+            color: #3d322b;
+        }
+
+        .narrative p {
+            margin-bottom: 1rem;
+            text-align: justify;
+        }
+
+        .narrative a {
+            color: #9f6d48;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 2px solid #e5c3a7;
+            padding-bottom: 1px;
+            transition: border-color 0.2s, background 0.2s;
+        }
+
+        .narrative a:hover {
+            border-bottom-color: #b47b53;
+            background: #f2e0cf;
+            border-radius: 6px;
+        }
+
+        /* 特点列表 — 卡片化 */
+        .features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 2.2rem 0 2rem 0;
+        }
+
+        .feature-item {
+            flex: 1 1 180px;
+            background: white;
+            padding: 1.4rem 1.2rem;
+            border-radius: 28px 12px 28px 12px;
+            box-shadow: 0 8px 16px -8px rgba(130, 80, 40, 0.12), 0 2px 6px rgba(0, 0, 0, 0.02);
+            transition: transform 0.1s ease, box-shadow 0.2s;
+            border: 1px solid #f3e2d3;
+        }
+
+        .feature-item:hover {
+            transform: scale(1.01);
+            box-shadow: 0 12px 24px -12px rgba(140, 90, 50, 0.18);
+        }
+
+        .feature-item h3 {
+            font-size: 1.1rem;
+            font-weight: 540;
+            margin-bottom: 0.4rem;
+            color: #5f3f2b;
+            letter-spacing: 0.01em;
+        }
+
+        .feature-item p {
+            font-size: 0.92rem;
+            color: #4f3d31;
+            margin-bottom: 0;
+        }
+
+        .feature-item .accent {
+            display: inline-block;
+            background: #eddbc9;
+            border-radius: 40px;
+            padding: 0.1rem 0.6rem;
+            font-weight: 480;
+            color: #4b3526;
+        }
+
+        /* 温和收尾 */
+        .closing {
+            margin-top: 2.2rem;
+            padding: 1.2rem 1.5rem;
+            background: #faefe6;
+            border-radius: 60px 16px 60px 16px;
+            font-size: 0.98rem;
+            color: #3c2d23;
+            border: 1px solid #eddccc;
+            text-align: center;
+        }
+
+        .closing a {
+            color: #7b5b40;
+            font-weight: 500;
+            text-decoration: none;
+            border-bottom: 2px solid #d9b99b;
+            transition: background 0.15s;
+        }
+
+        .closing a:hover {
+            background: #e5cfbb;
+            border-radius: 20px;
+            padding: 0 0.3rem;
+        }
+
+        /* 点缀 */
+        .quiet-tag {
+            display: inline-block;
+            margin-top: 1.6rem;
+            color: #7a6557;
+            font-size: 0.8rem;
+            letter-spacing: 0.4px;
+            opacity: 0.7;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 开场短句：简洁叙述性 -->
+        <div class="opener">
+            <span>叙事</span> 每一款好游戏，都藏着一个等待被听见的故事。
+        </div>
+
+        <!-- 承接段落 —— 从主题内容展开 -->
+        <div class="narrative">
+            <p>
+                许多人最初只是因为消遣而打开一个游戏，后来却发现，那些精心编排的角色、场景与抉择，早已悄悄重塑了看待世界的方式。
+                <strong>爱游戏</strong> 的意义，从来不止于胜负或通关，而在于它能否让你在某个深夜里，对着一段对白会心一笑，或为一个抉择沉默很久。
+                在 <a href="https://portalsite-aiyouxi.com.cn">爱游戏</a> 的语境里，我们谈论的是那些真正触动过你的互动瞬间——无论来自独立小品还是史诗巨制。
+            </p>
+            <p>
+                近十年，叙事机制与美术语言不断融合，越来越多的作品开始探讨记忆、孤独、成长与联结。
+                而玩家也从“操作者”变成了“参与者”，在开放结局中寻找自己的解读。这也是为什么，我们相信<strong>爱游戏</strong>这件事，本身就在塑造一种独特的当代文化体验。
+            </p>
+        </div>
+
+        <!-- 特点列表：三块具体特质，信息密度稍高 -->
+        <div class="features">
+            <div class="feature-item">
+                <h3>场景 · 浸入</h3>
+                <p>雨林、废墟、赛博街道或手绘日记，环境本身成为叙事语言。光影与音景构建情感基调，不着一字却传递氛围。</p>
+                <span class="accent">环境叙事</span>
+            </div>
+            <div class="feature-item">
+                <h3>抉择 · 余响</h3>
+                <p>道德困境、分支结局、沉默选项——玩家的选择不只是分支树，更是对自我偏好的投影。每次重玩都可能发现新角度。</p>
+                <span class="accent">交互深度</span>
+            </div>
+            <div class="feature-item">
+                <h3>记忆 · 碎片</h3>
+                <p>收集品、日志、角色对话里的弦外之音，拼凑出完整图景。爱游戏的人往往也爱在这些碎片里思考“作者意图”。</p>
+                <span class="accent">解谜与解读</span>
+            </div>
+        </div>
+
+        <!-- 温和结尾 + 自然包含链接（不出现进入/点击等词） -->
+        <div class="closing">
+            如果你也愿意沉浸在那些值得细品的互动故事里，<a href="https://portalsite-aiyouxi.com.cn">爱游戏</a> 一直是一个安静的角落，等着与你分享下一段旅程。不必着急通关，有时候慢慢走，反而能看到更多风景。
+        </div>
+
+        <!-- 附加一个类似FAQ摘要的轻提示，不抢眼但增加内容层次 -->
+        <div style="margin-top: 1.6rem; padding: 0.2rem 0.8rem; font-size: 0.85rem; color: #6d594b; background: #f5e7db; border-radius: 40px; display: inline-block; border: 1px solid #e7d2bf;">
+            ❖ 常见疑问：爱游戏更侧重作品本身还是社区？—— 我们更倾向于作品带来的个人感受，但相信好的感受会自然形成交流。
+        </div>
+        <div class="quiet-tag">
+            · 故事仍在继续 ·
+        </div>
+    </div>
+</body>
+</html>
