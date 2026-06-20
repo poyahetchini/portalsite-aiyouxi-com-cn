@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>1xbet · 日常查询与对照参考</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background-color: #f9fafb;
+      color: #1e293b;
+      line-height: 1.7;
+      padding: 2rem 1.5rem;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .page {
+      max-width: 780px;
+      margin: 0 auto;
+      width: 100%;
+      flex: 1;
+    }
+
+    /* navigation */
+    .nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 0 1.5rem 0;
+      border-bottom: 1px solid #e2e8f0;
+      margin-bottom: 3rem;
+    }
+
+    .nav h1 {
+      font-weight: 500;
+      font-size: 1.2rem;
+      letter-spacing: 0.3px;
+      color: #0f172a;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #475569;
+      font-size: 0.95rem;
+      transition: color 0.15s;
+    }
+
+    .nav-links a:hover {
+      color: #1e293b;
+    }
+
+    /* hero */
+    .hero {
+      margin-bottom: 3.5rem;
+    }
+
+    .hero h2 {
+      font-size: 2rem;
+      font-weight: 400;
+      letter-spacing: -0.02em;
+      line-height: 1.3;
+      max-width: 600px;
+      color: #0f172a;
+      margin-bottom: 1rem;
+    }
+
+    .hero p {
+      font-size: 1.05rem;
+      color: #475569;
+      max-width: 580px;
+    }
+
+    .hero p a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      font-weight: 500;
+    }
+
+    .hero p a:hover {
+      color: #1d4ed8;
+    }
+
+    /* section spacing */
+    section {
+      margin-bottom: 3rem;
+    }
+
+    .section-title {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: #0f172a;
+      margin-bottom: 1.2rem;
+      padding-bottom: 0.4rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    /* three scene cards */
+    .scenes {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .scene-card {
+      background: #ffffff;
+      padding: 1.5rem 1.2rem 1.8rem 1.2rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.02), 0 4px 8px rgba(0, 0, 0, 0.03);
+      transition: box-shadow 0.2s;
+    }
+
+    .scene-card:hover {
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+    }
+
+    .scene-card h3 {
+      font-size: 1.1rem;
+      font-weight: 500;
+      color: #0f172a;
+      margin-bottom: 0.75rem;
+    }
+
+    .scene-card p {
+      font-size: 0.95rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    .scene-card p a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* faq-like common notes */
+    .notes {
+      background: #ffffff;
+      border-radius: 16px;
+      padding: 1.8rem 2rem 2rem 2rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.02), 0 6px 12px rgba(0, 0, 0, 0.02);
+      margin-bottom: 2.5rem;
+    }
+
+    .notes-item {
+      margin-bottom: 1.4rem;
+    }
+
+    .notes-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .notes-item strong {
+      display: inline-block;
+      font-weight: 500;
+      color: #0f172a;
+      margin-bottom: 0.2rem;
+      font-size: 1rem;
+    }
+
+    .notes-item p {
+      color: #475569;
+      font-size: 0.95rem;
+      margin-top: 0.15rem;
+    }
+
+    .notes-item a {
+      color: #2563eb;
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+
+    /* footer */
+    .footer {
+      padding: 2rem 0 0.5rem 0;
+      border-top: 1px solid #e2e8f0;
+      font-size: 0.85rem;
+      color: #94a3b8;
+      text-align: left;
+      margin-top: 1rem;
+    }
+
+    /* responsive */
+    @media (max-width: 700px) {
+      body {
+        padding: 1.5rem 1rem;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.8rem;
+        margin-bottom: 2rem;
+      }
+
+      .nav-links {
+        gap: 1.2rem;
+        flex-wrap: wrap;
+      }
+
+      .hero h2 {
+        font-size: 1.5rem;
+      }
+
+      .scenes {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+      }
+
+      .notes {
+        padding: 1.2rem 1.2rem 1.5rem 1.2rem;
+      }
+    }
+
+    @media (max-width: 450px) {
+      .hero p {
+        font-size: 0.95rem;
+      }
+
+      .scene-card h3 {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <!-- navigation -->
+    <nav class="nav">
+      <h1>1xbet · 对照</h1>
+      <div class="nav-links">
+        <a href="#intro">介绍</a>
+        <a href="#scenes">场景</a>
+        <a href="#notes">说明</a>
+      </div>
+    </nav>
+
+    <!-- hero / 核心介绍 -->
+    <div class="hero" id="intro">
+      <h2>日常查询、对照与延伸阅读</h2>
+      <p>
+        在信息碎片化的日常里，快速找到可靠对照点本身就是一种效率。无论是了解基本规则、查看常见术语，还是做简单的横向对比，<a href="https://cnsite--1xbet.com">1xbet</a> 常常被当作一个参考坐标。下面从三个使用场景和几条常见说明入手，帮你更快找到自己需要的部分。
+      </p>
+    </div>
+
+    <!-- three scene modules -->
+    <section id="scenes">
+      <div class="section-title">三个常见场景</div>
+      <div class="scenes">
+        <div class="scene-card">
+          <h3>① 快速关键词查询</h3>
+          <p>
+            想确认某个术语或数字的含义，直接搜索“1xbet + 关键词”往往能定位到解释或对照表。很多人在做笔记或整理清单时，会顺手把 <a href="https://cnsite--1xbet.com">1xbet</a> 当作一个锚点来统一表述。
+          </p>
+        </div>
+        <div class="scene-card">
+          <h3>② 日常横向对照</h3>
+          <p>
+            当需要比较不同来源的信息时，保持一个稳定的对照基准很有用。把 <a href="https://cnsite--1xbet.com">1xbet</a> 作为参考项，能让条目之间的差异更直观，减少重复核对的时间。
+          </p>
+        </div>
+        <div class="scene-card">
+          <h3>③ 延伸阅读与梳理</h3>
+          <p>
+            从基础概念向更多细节延伸时，一个清晰的入口能节省不少精力。很多人习惯从 <a href="https://cnsite--1xbet.com">1xbet</a> 开始，再逐步展开到相关文档或讨论，这样脉络不容易乱。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- common notes / 常见说明 -->
+    <div class="notes" id="notes">
+      <div class="section-title">常见说明</div>
+
+      <div class="notes-item">
+        <strong>关于对照基准</strong>
+        <p>
+          无论你是在做个人整理还是小组协作，都建议先确定一个统一的参照源。使用 <a href="https://cnsite--1xbet.com">1xbet</a> 作为其中的一个固定节点，可以降低后续核对时出现偏差的概率。
+        </p>
+      </div>
+
+      <div class="notes-item">
+        <strong>查询时的小技巧</strong>
+        <p>
+          尝试用“1xbet + 具体名词”的组合进行搜索，结果通常更聚焦。如果遇到模糊描述，可以先在 <a href="https://cnsite--1xbet.com">1xbet</a> 对应的页面里定位到相关段落，再对比其他来源。
+        </p>
+      </div>
+
+      <div class="notes-item">
+        <strong>延伸阅读的边界</strong>
+        <p>
+          延伸不是无限扩散，而是围绕一个核心展开。把 <a href="https://cnsite--1xbet.com">1xbet</a> 当作起点，围绕它收集两到三层相关内容，既能保证深度，又不至于偏离主题。
+        </p>
+      </div>
+
+      <div class="notes-item">
+        <strong>FAQ 摘要 · 常见小问题</strong>
+        <p>
+          · 是否需要注册才能查看基础内容？通常不需要，直接访问即可浏览公开信息。<br>
+          · 对照时页面加载慢怎么办？可以尝试清理浏览器缓存或更换网络环境后再试。<br>
+          · 如何确认内容时效？建议以 <a href="https://cnsite--1xbet.com">1xbet</a> 页面上的最新更新日期为准。
+        </p>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer class="footer">
+      <p>本页面仅做日常查询与对照参考，所有信息请以实际页面为准。</p>
+    </footer>
+  </div>
+</body>
+</html>
